@@ -10,7 +10,7 @@
 
 #+BEGIN_SRC sh
 IMAGE="rabbitmq"
-TAG="3.8.11"
+TAG="3.8.11-management-alpine"
 #+END_SRC
 
 ** Pull docker image
