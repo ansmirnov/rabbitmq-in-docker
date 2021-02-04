@@ -7,6 +7,7 @@
   - [[#prepare-configuration-parameters][Prepare configuration parameters]]
   - [[#run-rabbitmq-daemon][Run RabbitMQ daemon]]
   - [[#see-rabbitmq-logs][See RabbitMQ logs]]
+  - [[#inspect-rabbitmq-container][Inspect RabbitMQ container]]
   - [[#kill-the-container][Kill the container]]
   - [[#remove-the-container][Remove the container]]
   - [[#references][References]]
@@ -43,6 +44,12 @@ docker run -d --hostname rabbitmq --name rabbitmq --env-file .env -p "8080:15672
 
 #+BEGIN_SRC sh
 docker logs rabbitmq
+#+END_SRC
+
+** Inspect RabbitMQ container
+
+#+BEGIN_SRC sh
+docker inspect rabbitmq
 #+END_SRC
 
 ** Kill the container
