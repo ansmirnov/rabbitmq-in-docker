@@ -7,3 +7,9 @@
 IMAGE="rabbitmq"
 TAG="3.8.11"
 #+END_SRC
+
+** Pull docker image
+
+#+BEGIN_SRC sh
+docker pull $IMAGE:$TAG
+#+END_SRC
