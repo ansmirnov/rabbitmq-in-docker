@@ -4,6 +4,7 @@
 ** Contents                                                           :TOC_3:
   - [[#configure-docker-image-version][Configure docker image version]]
   - [[#pull-docker-image][Pull docker image]]
+  - [[#prepare-configuration-parameters][Prepare configuration parameters]]
   - [[#references][References]]
 
 ** Configure docker image version
@@ -19,6 +20,14 @@ TAG="3.8.11-management-alpine"
 docker pull $IMAGE:$TAG
 #+END_SRC
 
+** Prepare configuration parameters
+
+Contents of the .env file:
+
+#+BEGIN_SRC sh :tangle .env
+RABBITMQ_DEFAULT_USER=user
+RABBITMQ_DEFAULT_PASS=secretpassword
+#+END_SRC
 ** References
 
 1. https://hub.docker.com/_/rabbitmq/
