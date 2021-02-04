@@ -8,6 +8,7 @@
   - [[#run-rabbitmq-daemon][Run RabbitMQ daemon]]
   - [[#see-rabbitmq-logs][See RabbitMQ logs]]
   - [[#kill-the-container][Kill the container]]
+  - [[#remove-the-container][Remove the container]]
   - [[#references][References]]
 
 ** Configure docker image version
@@ -49,6 +50,13 @@ docker logs rabbitmq
 #+BEGIN_SRC sh
 docker kill rabbitmq
 #+END_SRC
+
+** Remove the container
+
+#+BEGIN_SRC sh
+docker rm rabbitmq
+#+END_SRC
+
 ** References
 
 1. https://hub.docker.com/_/rabbitmq/
