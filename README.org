@@ -8,6 +8,7 @@
   - [[#run-rabbitmq-daemon][Run RabbitMQ daemon]]
   - [[#see-rabbitmq-logs][See RabbitMQ logs]]
   - [[#inspect-rabbitmq-container][Inspect RabbitMQ container]]
+  - [[#test-rabbitmq-server][Test RabbitMQ server]]
   - [[#kill-the-container][Kill the container]]
   - [[#remove-the-container][Remove the container]]
   - [[#references][References]]
@@ -50,6 +51,12 @@ docker logs rabbitmq
 
 #+BEGIN_SRC sh
 docker inspect rabbitmq
+#+END_SRC
+
+** Test RabbitMQ server
+
+#+BEGIN_SRC sh
+docker run --link rabbitmq curlimages/curl -X POST --data '{"properties":{},"routing_key":"queue_test","payload":"message test","payload_encoding":"string"}' http://user:secretpassword@rabbitmq:15672/api/exchanges/%2f/amq.default/publish
 #+END_SRC
 
 ** Kill the container
