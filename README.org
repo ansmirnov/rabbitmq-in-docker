@@ -13,3 +13,7 @@ TAG="3.8.11"
 #+BEGIN_SRC sh
 docker pull $IMAGE:$TAG
 #+END_SRC
+
+** References
+
+1. https://hub.docker.com/_/rabbitmq/
