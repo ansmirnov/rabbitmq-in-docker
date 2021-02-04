@@ -30,7 +30,7 @@ docker pull $IMAGE:$TAG
 
 Contents of the .env file:
 
-#+BEGIN_SRC sh :tangle .env
+#+BEGIN_SRC sh :tangle .env.dist
 RABBITMQ_DEFAULT_USER=user
 RABBITMQ_DEFAULT_PASS=secretpassword
 #+END_SRC
