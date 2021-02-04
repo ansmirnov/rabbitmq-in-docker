@@ -5,6 +5,7 @@
   - [[#configure-docker-image-version][Configure docker image version]]
   - [[#pull-docker-image][Pull docker image]]
   - [[#prepare-configuration-parameters][Prepare configuration parameters]]
+  - [[#run-rabbitmq-daemon][Run RabbitMQ daemon]]
   - [[#references][References]]
 
 ** Configure docker image version
@@ -27,6 +28,12 @@ Contents of the .env file:
 #+BEGIN_SRC sh :tangle .env
 RABBITMQ_DEFAULT_USER=user
 RABBITMQ_DEFAULT_PASS=secretpassword
+#+END_SRC
+
+** Run RabbitMQ daemon
+
+#+BEGIN_SRC sh
+docker run -d --hostname rabbitmq --name rabbitmq --env-file .env -p "8080:15672" $IMAGE:$TAG
 #+END_SRC
 ** References
 
