@@ -1,5 +1,5 @@
 #+TITLE: Running RabbitMQ in Docker
-#+PROPERTY: header-args :session *shell rabbitmq* :results silent raw
+#+PROPERTY: header-args :session *shell docker* :results silent raw
 
 ** Contents                                                           :TOC_3:
   - [[#configure-docker-image-version][Configure docker image version]]
